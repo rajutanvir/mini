@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="addPost.css">
+
+<script>
+function myFunction() {
+  var txt;
+  if (confirm("Are you sure, you want to clear it?")) {
+    document.getElementById('message').value = "";
+    document.getElementById('tittle').value = "";
+  } 
+  
+}
+</script>
+</head>
+<body>
+<p id="demo"></p>
+
+<div class="container">
+  <div class="row">
+  <div style="text-align:center">
+    <h1>Tanvir's Blog</h1>
+  </div>
+      <form action="lib/addPost.php" method="post" >
+        <input type="text" id="tittle" name="tittle" placeholder="Subject..">
+        <textarea type="text" id="message" name="message" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit"  value="Submit">
+         <input type="button" onclick="myFunction()" value="Clear">
+
+
+        
+      </form>
+
+
+
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+body{
+background-color:springGreen;
+}
+img{
+	float:right;
+}
+.bu a{
+	background-color:HotPink;
+	width:200px;
+	border: 1px solid white;
+	height:50 px;
+	line-height:100 px;
+	text-align:center;
+	float: left;
+	color:brown;
+	font-size:18 px;
+}
+*{
+	box-sizing: border-box;
+}
+
+/*create three unequal that floats next to each other*/
+.column{
+	float: left;
+	padding:10px;
+	height: 800px;
+}
+
+.left, .right{
+	background-color:white ;
+	width: 25%;
+}
+
+.middle{
+	width:50%;
+	background-color:white;
+}
+
+/*claer floats after the colums*/
+.row:after{
+	content: " ";
+	display:table;
+	clear:both;
+}
+.ri{
+	background-color: lightgrey;
+	width:200px;
+	border:15px solid green;
+	padding:20px;
+	margin:20px;
+  text-align:left;
+}
+.li{
+	background-color: lightgrey;
+	width:200px;
+	border:15px solid green;
+	padding:20px;
+	margin:20px;
+  text-align:left;
+}
+.skills{
+	background-color: lightgrey;
+	width:200px;
+	border:10px solid green;
+	padding:10px;
+	margin:20px;
+  text-align:left;
+}
+.hobbies{
+	background-color: lightgrey;
+	width:250px;
+	border:15px solid green;
+	padding:20px;
+	margin:20px;
+  text-align:left;
+}
+.movies{
+	background-color: lightgrey;
+	width:250px;
+	border:10px solid green;
+	padding:50px;
+	margin:20px;
+  text-align:left;
+}
+.head{
+	background-color: pink;
+	latter-spacing:.1px
+}
