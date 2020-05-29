@@ -5,14 +5,15 @@ include 'config.php';
 
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $username = $_POST['albab'];
-        $password = $_POST['raju'];
+        $username = $_POST['username'];
+        $password = $_POST['password'];
         
         
-        $result = mysql_query("SELECT * FROM tbllogin WHERE username = '$username' and password = '$password' and is_active = '1'");
-        if (mysql_num_rows($result) != 0)
+        $result = mysqli_query($db,"SELECT * FROM tbllogin WHERE username = '$username' and password = '$password' and is_active = '1'");
+        $num_rows = mysqli_fetch_row($result)[0];
+        if ($num_rows != 0)
         {       
-            $row = mysql_fetch_array($result);
+            
             $_SESSION['username'] = $username;
             $_SESSION['start'] = time(); // Taking now logged in time.
             // Ending a session in 30 minutes from the starting time.
@@ -23,7 +24,7 @@ include 'config.php';
             
             
         } else {
-            header('Location: ../login.php');
+            header('Location: ../login.html');
         }
         
         }
